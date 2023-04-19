@@ -19,4 +19,4 @@ The results for the final model (v2) are as follows:
 - Test loss (v2): 1.0121
 - Test accuracy (v2): 0.6478
 The confusion matrix for the final model (v2) is shown below:
-![Confusion Matrix](charts/Confusion_Matrix.png)
+![Confusion Matrix](Charts/Confusion_Matrix.png)
