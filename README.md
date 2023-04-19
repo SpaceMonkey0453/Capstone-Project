@@ -16,6 +16,7 @@ The notebook.ipynb file demonstrates an iterative approach to model-building. It
 The notebook.ipynb file shows how well the final model solves the real-world problem. The choice of evaluation metrics is justified using the context of the real-world problem and the consequences of errors. One final model is identified based on its performance on the chosen metrics with validation data. The performance of the final model is evaluated using holdout test data.
 
 The results for the final model (v2) are as follows:
-    Test loss (v2): 1.0121
-    Test accuracy (v2): 0.6478
+- Test loss (v2): 1.0121
+- Test accuracy (v2): 0.6478
 The confusion matrix for the final model (v2) is shown below:
+![Confusion Matrix](charts/Confusion_Matrix.png)
