@@ -50,4 +50,4 @@ However, there's still room for improvement. Some of the key takeaways and futur
 
 5. Hyperparameter optimization: Although we conducted a grid search for hyperparameter tuning, more advanced techniques such as Bayesian optimization or genetic algorithms can be used to find a better combination of hyperparameters that lead to improved performance.
 
-In conclusion, this project has provided us with a strong foundation for building facial emotion recognition systems. By applying the lessons learned and exploring the suggested improvements, we can continue to refine the model and create a more robust and accurate system for real-world applications.S
+In conclusion, this project has provided us with a strong foundation for building facial emotion recognition systems. By applying the lessons learned and exploring the suggested improvements, we can continue to refine the model and create a more robust and accurate system for real-world applications.
