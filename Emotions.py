@@ -21,6 +21,18 @@ def preprocess_image(img):
     tensor = tensor.astype('float32') / 255.0
     return tensor
 
+def get_emoji(emotion):
+    emoji_dict = {
+        'Angry': '😠',
+        'Disgust': '🤢',
+        'Fear': '😨',
+        'Happy': '😄',
+        'Sad': '😔',
+        'Surprise': '😲',
+        'Neutral': '😐'
+    }
+    return emoji_dict[emotion]
+
 # Define the Streamlit app
 def app():
     st.title("Facial Emotion Tracking App")
@@ -56,11 +68,18 @@ def app():
             # Map the prediction to a human-readable emotion label
             emotion_labels = ['Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral']
             predicted_label = emotion_labels[np.argmax(prediction)]
+            emoji = get_emoji(predicted_label)
             
             # Display the original image with the detected face region and the predicted emotion label
             st.image(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), caption="Original Image", use_column_width=True)
             st.image(cv2.cvtColor(cropped, cv2.COLOR_BGR2RGB), caption="Cropped Face Region", use_column_width=True)
-            st.write(f"Predicted Emotion: {predicted_label}")
+            
+            with st.container():
+                st.write(f"Predicted Emotion: <span style='font-size: 50px; font-weight: bold;'>{predicted_label} {emoji}</span>", 
+                         unsafe_allow_html=True, 
+                         key='predicted_emotion',
+                         )
+                st.markdown("<style>.css-1aumxhk{text-align:center !important}</style>", unsafe_allow_html=True)
         
         # If no face is detected, display an error message
         else:
